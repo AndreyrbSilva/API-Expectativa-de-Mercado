@@ -1,0 +1,30 @@
+class ExpectativaAnual:
+    
+    def __init__(self, Indicador, IndicadorDetalhe, Data, DataReferencia, Media, Mediana, DesvioPadrao, 
+                 Minimo, Maximo, numeroRespondentes, baseCalculo):
+        self.Indicador = Indicador
+        self.IndicadorDetalhe = IndicadorDetalhe
+        self.Data = Data
+        self.DataReferencia = DataReferencia
+        self.Media = Media
+        self.Mediana = Mediana
+        self.DesvioPadrao = DesvioPadrao
+        self.Minimo = Minimo
+        self.Maximo = Maximo
+        self.numeroRespondentes = numeroRespondentes
+        self.baseCalculo = baseCalculo
+        
+    def to_dict(self):
+        return {
+            "Indicador": self.Indicador,
+            "IndicadorDetalhe": self.IndicadorDetalhe,
+            "Data": self.Data,
+            "DataReferencia": self.DataReferencia,
+            "Media": self.Media,
+            "Mediana": self.Mediana,
+            "DesvioPadrao": self.DesvioPadrao,
+            "Minimo": self.Minimo,
+            "Maximo": self.Maximo,
+            "numeroRespondentes": self.numeroRespondentes,
+            "baseCalculo": self.baseCalculo
+        }
