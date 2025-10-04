@@ -1,22 +1,25 @@
-class ExpectativasSelic:
-
-    def __init__(self, Indicador, Data, Reuniao, Media, Mediana, DesvioPadrao, Minimo, Maximo, numeroRespondentes, baseCalculo):
+class ExpectativaAnual:
+    
+    def __init__(self, Indicador, IndicadorDetalhe, Data, DataReferencia, Media, Mediana, DesvioPadrao, 
+                 Minimo, Maximo, numeroRespondentes, baseCalculo):
         self.Indicador = Indicador
+        self.IndicadorDetalhe = IndicadorDetalhe
         self.Data = Data
-        self.Reuniao = Reuniao
+        self.DataReferencia = DataReferencia
         self.Media = Media
         self.Mediana = Mediana
         self.DesvioPadrao = DesvioPadrao
-        self.Minimo = Minimo 
-        self.Maximo = Maximo 
+        self.Minimo = Minimo
+        self.Maximo = Maximo
         self.numeroRespondentes = numeroRespondentes
         self.baseCalculo = baseCalculo
-
+        
     def to_dict(self):
-        return{
+        return {
             "Indicador": self.Indicador,
+            "IndicadorDetalhe": self.IndicadorDetalhe,
             "Data": self.Data,
-            "Reuniao": self.Reuniao,
+            "DataReferencia": self.DataReferencia,
             "Media": self.Media,
             "Mediana": self.Mediana,
             "DesvioPadrao": self.DesvioPadrao,
